@@ -1,0 +1,34 @@
+== EmailJS Template Configuration Reference ==
+
+Template ID: template_30mffms
+Service ID: service_alioa7n
+
+== Variables to use in your template ==
+
+{{to_name}} - The provider's name
+{{to_email}} - The provider's email address
+{{username}} - The provider's username (for login)
+{{password}} - The provider's password
+{{login_url}} - URL to the login page
+
+== Example of how to use in your template ==
+
+Hello {{to_name}},
+
+Your service provider account has been created successfully. You can now log in to the Home Service Provider portal using the following credentials:
+
+Username: {{username}}
+Password: {{password}}
+
+To access your account, please visit: {{login_url}}
+
+== Troubleshooting ==
+
+If the username is not appearing in your emails:
+
+1. Make sure the variable name in your template exactly matches "username" (not "Username" or "user_name")
+2. Check that the variable is properly surrounded by double curly braces: {{username}}
+3. Verify in the EmailJS console that the template is receiving the username variable
+4. In the EmailJS dashboard, go to the "Test" tab for your template and manually test with the username parameter
+
+Remember that variable names in EmailJS are case-sensitive. 
