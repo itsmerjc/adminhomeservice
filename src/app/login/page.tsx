@@ -67,8 +67,12 @@ export default function LoginPage() {
 
       {/* Footer Buttons */}
       <div className="mt-8 flex gap-4">
-        <button className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded text-sm text-black">About</button>
-        <button className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded text-sm text-black">Terms & Conditions</button>
+        <Link href="/about">
+          <button className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded text-sm text-black">About</button>
+        </Link>
+        <Link href="/terms">
+          <button className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded text-sm text-black">Terms & Conditions</button>
+        </Link>
       </div>
     </div>
   );
