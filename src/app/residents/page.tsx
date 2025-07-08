@@ -88,7 +88,7 @@ export default function ResidentsPage() {
 
         <div className="mt-6">
           <Link href="/dashboard">
-            <button className="px-4 py-2 bg-white text-[#1a5f7a] border border-[#1a5f7a] rounded-md hover:bg-gray-50 transition-colors">
+            <button className="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-800 transition-colors">
               Back to Dashboard
             </button>
           </Link>

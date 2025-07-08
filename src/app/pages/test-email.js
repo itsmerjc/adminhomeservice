@@ -75,7 +75,7 @@ export default function TestEmailPage() {
       <button
         onClick={sendTestEmail}
         disabled={loading}
-        className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 disabled:opacity-50"
+        className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 disabled:opacity-50"
       >
         {loading ? 'Sending...' : 'Send Test Email'}
       </button>

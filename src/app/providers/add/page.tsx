@@ -348,7 +348,7 @@ Please note these credentials as the email could not be sent to ${providerResult
             <Link href="/providers">
               <button 
                 type="button"
-                className="px-4 py-2 bg-white text-[#1a5f7a] border border-[#1a5f7a] rounded-md hover:bg-gray-50 transition-colors"
+                className="px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-blue-800 transition-colors"
               >
                 Cancel
               </button>
@@ -357,7 +357,7 @@ Please note these credentials as the email could not be sent to ${providerResult
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`px-6 py-2 bg-black text-white rounded-md font-medium hover:bg-gray-800 transition-colors flex items-center ${
+              className={`px-6 py-2 bg-green-600 text-white rounded-md font-medium hover:bg-green-700 transition-colors flex items-center ${
                 isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
               }`}
             >
