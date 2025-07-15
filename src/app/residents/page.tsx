@@ -41,6 +41,21 @@ export default function ResidentsPage() {
     fetchResidents();
   }, []);
 
+  // Add delete handler
+  const handleDelete = async (id: number) => {
+    if (!confirm('Are you sure you want to delete this resident?')) return;
+    try {
+      const response = await fetch(`/api/residents/${id}`, { method: 'DELETE' });
+      if (!response.ok) {
+        throw new Error('Failed to delete resident');
+      }
+      setResidents(residents.filter(r => r.id !== id));
+    } catch (err) {
+      alert('Error deleting resident.');
+      console.error(err);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="p-6 max-w-7xl mx-auto">
@@ -70,6 +85,7 @@ export default function ResidentsPage() {
                   <th className="py-3 px-4 text-left text-sm font-medium text-gray-900 border-b">Email</th>
                   <th className="py-3 px-4 text-left text-sm font-medium text-gray-900 border-b">Address</th>
                   <th className="py-3 px-4 text-left text-sm font-medium text-gray-900 border-b">Phone</th>
+                  <th className="py-3 px-4 text-left text-sm font-medium text-gray-900 border-b">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -79,6 +95,14 @@ export default function ResidentsPage() {
                     <td className="py-4 px-4 text-sm text-gray-900">{resident.email}</td>
                     <td className="py-4 px-4 text-sm text-gray-900">{resident.address || 'Not provided'}</td>
                     <td className="py-4 px-4 text-sm text-gray-900">{resident.phone || 'Not provided'}</td>
+                    <td className="py-4 px-4 text-sm text-gray-900">
+                      <button
+                        className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition-colors text-xs"
+                        onClick={() => handleDelete(resident.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
