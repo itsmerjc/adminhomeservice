@@ -8,24 +8,20 @@ export default function LoginPage() {
     <div className="flex flex-col items-center justify-center h-full py-8">
       {/* Title Content */}
       <div className="text-white text-center mb-8 relative">
-        <div className="absolute left-1/2 -translate-x-1/2 -top-4 w-24 h-24">
+        <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-32 h-32 mt-10">
           <Image
             src="/thelogo.jpg"
             alt="Barangay Logo"
-            width={96}
-            height={96}
-            className="rounded-full"
+            width={400}
+            height={400}
+            className="rounded-full h-32 w-32"
           />
         </div>
-        <div className="pt-20">
-          <h1 className="text-4xl font-bold mb-2">SANGGUNIANG BARANGAY NG</h1>
-          <h1 className="text-6xl font-bold mb-2">CARSADANG BAGO 1</h1>
-          <h2 className="text-2xl">LUNGSOD NG IMUS, LALAWIGAN NG CAVITE</h2>
-        </div>
+
       </div>
 
       {/* Login Form */}
-      <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 w-full max-w-md">
+      <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 w-full max-w-md mt-36">
         <h3 className="text-2xl font-bold text-center text-black mb-6">ADMIN LOGIN</h3>
         <form className="space-y-6">
           <div>
